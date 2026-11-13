@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COWGIRL LIFE — Western Chic Editorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --turquoise: #28b5c5;
+      --turquoise-dark: #167a87;
+      --turquoise-light: #e0f7fa;
+      --leather: #3d2415;
+      --leather-soft: #6b442b;
+      --parchment: rgba(252, 248, 241, 0.93);
+      --border-gold: rgba(184, 146, 90, 0.45);
+      --shadow-warm: 0 18px 45px rgba(34, 18, 9, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 20px 12px 60px;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--leather);
+      background-color: #ebe0d0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Crect width='360' height='360' fill='%23f4ece1'/%3E%3Cg fill='%2359331d'%3E%3Cpath d='M42,18 C68,12 94,35 88,64 C82,92 52,102 28,85 C6,68 15,24 42,18 Z'/%3E%3Cpath d='M210,25 C245,15 280,45 270,82 C260,115 215,120 192,94 C170,68 178,34 210,25 Z'/%3E%3Cpath d='M125,135 C158,122 195,148 188,185 C180,222 135,230 112,202 C90,174 95,146 125,135 Z'/%3E%3Cpath d='M295,150 C328,142 350,175 340,210 C330,242 290,248 272,220 C255,192 265,158 295,150 Z'/%3E%3Cpath d='M35,235 C68,225 98,255 88,292 C78,325 38,332 18,305 C0,278 5,244 35,235 Z'/%3E%3Cpath d='M195,255 C232,245 265,275 255,312 C245,345 202,350 180,322 C158,294 162,264 195,255 Z'/%3E%3C/g%3E%3Cg fill='%238c5432' opacity='0.55'%3E%3Cpath d='M145,42 C162,38 175,55 168,72 C161,88 140,86 132,70 C125,55 130,45 145,42 Z'/%3E%3Cpath d='M315,55 C335,50 348,68 340,86 C332,102 310,100 302,84 C295,68 300,58 315,55 Z'/%3E%3Cpath d='M48,150 C66,145 78,162 72,178 C66,194 45,192 38,176 C31,160 35,154 48,150 Z'/%3E%3Cpath d='M125,285 C144,280 156,296 149,314 C142,330 122,328 114,312 C106,296 112,288 125,285 Z'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 320px 320px;
+      background-attachment: fixed;
+    }
+
+    .western-header {
+      max-width: 1200px;
+      margin: 0 auto 22px;
+      text-align: center;
+      padding: 14px 12px 6px;
+    }
+
+    .western-title {
+      font-family: 'Alfa Slab One', serif;
+      font-size: clamp(2.5rem, 6.2vw, 4.6rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.05;
+      color: var(--turquoise);
+      background: linear-gradient(180deg, #67e8f9 0%, #22b8cf 50%, #0b7285 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(3px 3px 0px #2b170c) drop-shadow(0px 6px 14px rgba(0,0,0,0.35));
+    }
+
+    .western-subtitle-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 6px 20px;
+      background: rgba(61, 36, 21, 0.9);
+      color: #f9f3e8;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      border-radius: 30px;
+      border: 1px solid var(--turquoise);
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--parchment);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 2px solid var(--border-gold);
+      border-radius: 18px;
+      box-shadow: var(--shadow-warm);
+      padding: 24px;
+    }
+
+    .top-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      border-bottom: 1px dashed var(--border-gold);
+    }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill-btn {
+      background: #f5ebe0;
+      color: var(--leather);
+      border: 1px solid var(--border-gold);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--turquoise);
+      color: #fff;
+      border-color: var(--turquoise-dark);
+    }
+
+    .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--leather);
+      color: #fff;
+      border: none;
+      border-bottom: 2px solid var(--turquoise);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--turquoise-dark);
+    }
+
+    .btn-export {
+      background: #fff;
+      color: var(--turquoise-dark);
+      border: 1.5px solid var(--turquoise);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-export:hover {
+      background: var(--turquoise-light);
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 245px 1fr 255px;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .widget-box {
+      background: rgba(255, 252, 247, 0.92);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(61, 36, 21, 0.05);
+    }
+
+    .widget-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--leather);
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--turquoise);
+    }
+
+    .sheriff-card {
+      text-align: center;
+      border: 1.5px dashed var(--turquoise-dark);
+      border-radius: 10px;
+      padding: 14px 10px;
+      background: linear-gradient(180deg, rgba(40, 181, 197, 0.09), rgba(255,255,255,0.65));
+    }
+
+    .sheriff-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--turquoise-dark);
+      margin-bottom: 8px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      background: #fffdf9;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      color: var(--leather);
+      margin-bottom: 8px;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--turquoise);
+    }
+
+    .post-card {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(61, 36, 21, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--leather-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 8px;
+    }
+
+    .post-cat-tag {
+      background: var(--turquoise-light);
+      color: var(--turquoise-dark);
+      padding: 2px 9px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      margin: 0 0 10px;
+      line-height: 1.25;
+      color: var(--leather);
+      cursor: pointer;
+    }
+
+    .post-title:hover {
+      color: var(--turquoise-dark);
+    }
+
+    .post-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #4a3222;
+      margin: 0 0 16px;
+    }
+
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid #f2e8da;
+    }
+
+    .like-btn {
+      background: #fcf6ee;
+      border: 1px solid var(--border-gold);
+      color: var(--leather);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .like-btn.liked {
+      background: var(--turquoise-light);
+      border-color: var(--turquoise);
+      color: var(--turquoise-dark);
+    }
+
+    .cowboy-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.45;
+      margin: 0;
+      color: var(--leather);
+    }
+
+    .cowboy-author {
+      display: block;
+      margin-top: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--turquoise-dark);
+    }
+
+    .tags-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag-chip {
+      background: #f5ebe0;
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--leather);
+      cursor: pointer;
+    }
+
+    .tag-chip:hover {
+      background: var(--turquoise);
+      color: #fff;
+      border-color: var(--turquoise-dark);
+    }
+
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(29, 16, 8, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #fffcf7;
+      border: 2px solid var(--border-gold);
+      border-radius: 16px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 26px;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: #f3e7d8;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--leather);
+    }
+
+    @media (max-width: 980px) {
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="western-header">
+    <h1 class="western-title">COWGIRL LIFE</h1>
+    <div class="western-subtitle-bar">
+      <span>&#9733;</span>
+      <span>Diário Western Chic, Estradas de Terra &amp; Estilo</span>
+      <span>&#9733;</span>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <div class="top-toolbar">
+      <div class="category-pills" id="categoryPills">
+        <button class="pill-btn active" data-cat="Todas">Todas</button>
+        <button class="pill-btn" data-cat="Estilo & Botas">Estilo &amp; Botas</button>
+        <button class="pill-btn" data-cat="Rodeio & Campo">Rodeio &amp; Campo</button>
+        <button class="pill-btn" data-cat="Country Music">Country Music</button>
+      </div>
+      <div class="action-group">
+        <button class="btn-export" onclick="exportUpdatedHTML()" title="Baixa o arquivo index.html já com seus novos posts salvos">&#8681; Baixar index.html Atualizado</button>
+        <button class="btn-primary" onclick="openEditorModal()">+ Nova Postagem</button>
+      </div>
+    </div>
+
+    <div class="editorial-grid">
+      <aside>
+        <div class="widget-box">
+          <div class="sheriff-card">
+            <div class="sheriff-label">&#9733; Aprovado pelo Xerife &#9733;</div>
+            <svg width="92" height="56" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12 C4 28, 22 40, 44 36 L48 48 L60 58 L72 48 L76 36 C98 40, 116 28, 110 12 C104 22, 92 26, 76 24 L60 18 L44 24 C28 26, 16 22, 10 12 Z" fill="#3d2415" stroke="#28b5c5" stroke-width="2.5"/>
+              <circle cx="60" cy="32" r="4" fill="#28b5c5"/>
+            </svg>
+            <div style="font-size:0.75rem; color:#6b442b; margin-top:4px;">Western Chic Oficial</div>
+          </div>
+        </div>
+
+        <div class="widget-box">
+          <h3 class="widget-title">Correio da Fronteira</h3>
+          <p style="font-size:0.8rem; line-height:1.5; margin:0 0 10px; color:#5a3a26;">Receba as novas histórias direto no seu acampamento:</p>
+          <form onsubmit="handleNewsletter(event)">
+            <input type="email" id="newsletterEmail" class="input-field" placeholder="Seu melhor e-mail..." required />
+            <button type="submit" class="btn-primary" style="width:100%;">Assinar Despacho</button>
+          </form>
+          <div id="newsletterMsg" style="font-size:0.75rem; color:var(--turquoise-dark); margin-top:8px; font-weight:600;"></div>
+        </div>
+      </aside>
+
+      <main id="postsFeed"></main>
+
+      <aside>
+        <div class="widget-box">
+          <blockquote class="cowboy-quote">
+            "Nunca se aproxime de um touro pela frente, de um cavalo por trás ou de um tolo por qualquer lado."
+            <span class="cowboy-author">&#8212; Provérbio Cowboy</span>
+          </blockquote>
+        </div>
+
+        <div class="widget-box">
+          <h3 class="widget-title">Pesquisar no Blog</h3>
+          <input type="text" id="searchInput" class="input-field" placeholder="Buscar histórias..." oninput="renderPosts()" />
+        </div>
+
+        <div class="widget-box">
+          <h3 class="widget-title">Marcas no Couro</h3>
+          <div class="tags-cloud">
+            <span class="tag-chip" onclick="filterByTag('Botas')">#Botas</span>
+            <span class="tag-chip" onclick="filterByTag('Violão')">#Violão</span>
+            <span class="tag-chip" onclick="filterByTag('Rodeio')">#Rodeio</span>
+            <span class="tag-chip" onclick="filterByTag('VelhoOeste')">#VelhoOeste</span>
+            <span class="tag-chip" onclick="filterByTag('Cavalo')">#Cavalo</span>
+            <span class="tag-chip" onclick="filterByTag('CountryMusic')">#CountryMusic</span>
+          </div>
+        </div>
+
+        <div class="widget-box">
+          <h3 class="widget-title">Quem Sou Eu</h3>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <div style="width:48px; height:48px; border-radius:50%; background:var(--leather); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:700; border:2px solid var(--turquoise); flex-shrink:0;">CL</div>
+            <p style="font-size:0.78rem; line-height:1.45; margin:0; color:#4a3222;">Apaixonada pela vida no campo, botas bordadas e música country raiz.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="readerModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('readerModal')">X</button>
+      <div id="readerContent"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="editorModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('editorModal')">X</button>
+      <h2 style="font-family:'Playfair Display',serif; margin-top:0;">Escrever Nova Postagem</h2>
+      <form onsubmit="publishPost(event)">
+        <label style="font-size:0.78rem; font-weight:700;">Título da Postagem</label>
+        <input type="text" id="postTitleInput" class="input-field" placeholder="Ex: Guia definitivo de botas texanas..." required />
+        <label style="font-size:0.78rem; font-weight:700;">Categoria</label>
+        <select id="postCatInput" class="input-field">
+          <option value="Estilo & Botas">Estilo &amp; Botas</option>
+          <option value="Rodeio & Campo">Rodeio &amp; Campo</option>
+          <option value="Country Music">Country Music</option>
+        </select>
+        <label style="font-size:0.78rem; font-weight:700;">Marcas (separadas por vírgula)</label>
+        <input type="text" id="postTagsInput" class="input-field" placeholder="Botas, Rodeio, CountryMusic" />
+        <label style="font-size:0.78rem; font-weight:700;">Conteúdo</label>
+        <textarea id="postBodyInput" class="input-field" rows="6" placeholder="Escreva sua história aqui..." required></textarea>
+        <button type="submit" class="btn-primary" style="width:100%; padding:11px;">Publicar no Blog</button>
+      </form>
+    </div>
+  </div>
+
+  <script id="initial-posts-data" type="application/json">
+[
+  {
+    "id": 1,
+    "title": "Como combinar turquesa e couro envelhecido no visual Western Chic",
+    "category": "Estilo & Botas",
+    "date": "13 de Novembro, 2026",
+    "tags": ["Botas", "VelhoOeste"],
+    "likes": 18,
+    "liked": false,
+    "excerpt": "O contraste entre o marrom rústico do couro artesanal e o brilho vibrante da pedra turquesa é a assinatura clássica do estilo western moderno.",
+    "content": "O contraste entre o marrom rústico do couro artesanal e o brilho vibrante da pedra turquesa é a assinatura clássica do estilo western moderno.\n\nPara equilibrar a produção sem exageros, aposte em uma peça focal — como uma fivela trabalhada ou um colar de prata envelhecida com turquesa — combinada com camisa de linho creme, jeans de corte reto e botas texanas bem hidratadas."
+  },
+  {
+    "id": 2,
+    "title": "Fim de tarde na porteira: moda de viola e café coado na hora",
+    "category": "Country Music",
+    "date": "10 de Novembro, 2026",
+    "tags": ["Violão", "CountryMusic", "Cavalo"],
+    "likes": 24,
+    "liked": false,
+    "excerpt": "Nada traduz melhor a alma do campo do que o som acústico das cordas ao entardecer enquanto a poeira baixa na estrada.",
+    "content": "Nada traduz melhor a alma do campo do que o som acústico das cordas ao entardecer enquanto a poeira baixa na estrada.\n\nSeja no country clássico de Nashville ou na moda de viola do interior do Brasil, as melhores histórias nascem ao redor da varanda, sem pressa e com boa companhia."
+  }
+]
+  </script>
+
+  <script>
+    const defaultPosts = JSON.parse(document.getElementById('initial-posts-data').textContent);
+    let posts = JSON.parse(localStorage.getItem('cowgirl_life_posts')) || defaultPosts;
+    let activeCategory = 'Todas';
+
+    document.querySelectorAll('#categoryPills .pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#categoryPills .pill-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.cat;
+        renderPosts();
+      });
+    });
+
+    function filterByTag(tag) {
+      document.getElementById('searchInput').value = tag;
+      renderPosts();
+    }
+
+    function renderPosts() {
+      const feed = document.getElementById('postsFeed');
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = posts.filter(p => {
+        const matchCat = activeCategory === 'Todas' || p.category === activeCategory;
+        const matchQuery = !query ||
+          p.title.toLowerCase().includes(query) ||
+          p.content.toLowerCase().includes(query) ||
+          p.tags.some(t => t.toLowerCase().includes(query));
+        return matchCat && matchQuery;
+      });
+
+      if (!filtered.length) {
+        feed.innerHTML = '<div class="post-card" style="text-align:center;"><h3 style="font-family:Playfair Display,serif;">Nenhuma postagem encontrada</h3><p style="font-size:0.85rem;color:#6b442b;">Tente limpar o filtro ou escreva uma nova história.</p></div>';
+        return;
+      }
+
+      feed.innerHTML = filtered.map(post => `
+        <article class="post-card">
+          <div class="post-meta">
+            <span class="post-cat-tag">${post.category}</span>
+            <span>${post.date}</span>
+            <span>${post.tags.map(t => '#' + t).join(' ')}</span>
+          </div>
+          <h2 class="post-title" onclick="openReader(${post.id})">${post.title}</h2>
+          <p class="post-excerpt">${post.excerpt}</p>
+          <div class="post-footer">
+            <button class="like-btn ${post.liked ? 'liked' : ''}" onclick="toggleLike(${post.id})">&#9829; ${post.likes} Curtidas</button>
+            <button class="btn-primary" onclick="openReader(${post.id})">Ler Artigo &#8594;</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function toggleLike(id) {
+      posts = posts.map(p => {
+        if (p.id === id) {
+          p.liked = !p.liked;
+          p.likes += p.liked ? 1 : -1;
+        }
+        return p;
+      });
+      localStorage.setItem('cowgirl_life_posts', JSON.stringify(posts));
+      renderPosts();
+    }
+
+    function openReader(id) {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+      const paragraphs = post.content.split('\n').filter(Boolean).map(p => `<p style="line-height:1.8;font-size:0.98rem;">${p}</p>`).join('');
+      document.getElementById('readerContent').innerHTML = `
+        <div class="post-meta"><span class="post-cat-tag">${post.category}</span><span>${post.date}</span></div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin:8px 0 16px;">${post.title}</h2>
+        ${paragraphs}
+      `;
+      document.getElementById('readerModal').classList.add('open');
+    }
+
+    function openEditorModal() {
+      document.getElementById('editorModal').classList.add('open');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    function publishPost(e) {
+      e.preventDefault();
+      const title = document.getElementById('postTitleInput').value.trim();
+      const category = document.getElementById('postCatInput').value;
+      const tagsRaw = document.getElementById('postTagsInput').value;
+      const content = document.getElementById('postBodyInput').value.trim();
+
+      const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim().replace(/^#/, '')).filter(Boolean) : ['WesternChic'];
+      const excerpt = content.length > 155 ? content.slice(0, 155) + '...' : content;
+      const today = new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+      posts.unshift({
+        id: Date.now(),
+        title,
+        category,
+        date: today,
+        tags,
+        likes: 1,
+        liked: true,
+        excerpt,
+        content
+      });
+
+      localStorage.setItem('cowgirl_life_posts', JSON.stringify(posts));
+      e.target.reset();
+      closeModal('editorModal');
+      renderPosts();
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('newsletterMsg').textContent = 'Inscrito no Correio da Fronteira!';
+      e.target.reset();
+    }
+
+    function exportUpdatedHTML() {
+      const clone = document.documentElement.cloneNode(true);
+      const dataScript = clone.querySelector('#initial-posts-data');
+      dataScript.textContent = '\n' + JSON.stringify(posts, null, 2) + '\n  ';
+      clone.querySelector('#postsFeed').innerHTML = '';
+      clone.querySelector('#readerModal').classList.remove('open');
+      clone.querySelector('#editorModal').classList.remove('open');
+
+      const fullHTML = '<!DOCTYPE html>\n' + clone.outerHTML;
+      const blob = new Blob([fullHTML], { type: 'text/html;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+    }
+
+    renderPosts();
+  </script>
+</body>
+</html>
